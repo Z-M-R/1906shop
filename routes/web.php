@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/find','UserController@vFind');     //找回密码
+Route::post('/find','UserController@find');     
+Route::get('/reset','UserController@vReset');   //重置密码
+Route::post('/reset','UserController@reset');   
