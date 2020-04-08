@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //注册
 Route::get('/reg','admin\AdminController@reg');
 //执行注册
@@ -31,3 +32,7 @@ Route::post('/find','UserController@find');
 Route::get('/reset','UserController@vReset');   //重置密码
 Route::post('/reset','UserController@reset');   
 >>>>>>> zhang
+=======
+Route::get('/reset','Reset\ResetController@reset');   //修改密码视图
+Route::post('/resetdo','Reset\ResetController@resetdo'); //修改密码执行
+>>>>>>> mxl
