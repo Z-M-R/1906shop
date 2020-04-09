@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\models\reg;
+use Illuminate\Support\Facades\Mail;            //Mail
 
 class AdminController extends Controller
 {
@@ -41,6 +42,18 @@ class AdminController extends Controller
 		$post=Request()->all();
 		$get=reg::where('mobile',$post['mobile'])->get()->toArray();
 		//dd($get);
+
+		//登录成功----发送邮件
+        $url = [];
+        Mail::send('login.email', $url, function ($message) {
+            $to = [
+                '877673916@qq.com'
+            ];
+
+            $message->to($to)->subject("登录成功");
+
+        });
+
 		if($get==[]){
 			return redirect('/login');
 		}else{
