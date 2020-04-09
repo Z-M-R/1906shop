@@ -24,20 +24,30 @@
                 <div class="text-center margin-big padding-big-top"><h1>登录</h1></div>
                 <div class="panel-body" style="padding:30px; padding-bottom:10px; padding-top:10px;">
                     <div class="form-group">
+                        用户名：
                         <div class="field field-icon-right">
                             <input type="text" class="input input-big" name="username" placeholder="用户名" data-validate="required:请填写用户名" />
                             <span class="icon icon-user margin-small"></span>
                         </div>
                     </div>
                     <div class="form-group">
+                        邮箱：
                         <div class="field field-icon-right">
                             <input type="text" class="input input-big" name="email" placeholder="email" data-validate="required:请填写邮箱" />
                             <span class="icon icon-user margin-small"></span>
                         </div>
                     </div>
                     <div class="form-group">
+                        手机号：
                         <div class="field field-icon-right">
                             <input type="text" class="input input-big" name="mobile" placeholder="手机号" data-validate="required:请填写手机号" />
+                            <span class="icon icon-user margin-small"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        密码：
+                        <div class="field field-icon-right">
+                            <input type="password" class="input input-big" name="password" placeholder="密码" data-validate="required:请输入您的密码" />
                             <span class="icon icon-user margin-small"></span>
                         </div>
                     </div>
