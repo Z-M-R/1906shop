@@ -31,3 +31,4 @@ Route::post('/reset','UserController@reset');
 
 Route::get('/reset','Reset\ResetController@reset');   //修改密码视图
 Route::post('/resetdo','Reset\ResetController@resetdo'); //修改密码执行
+

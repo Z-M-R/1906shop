@@ -65,7 +65,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+            <!-- @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
@@ -77,11 +77,16 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif -->
+            <div class="top-right links">
+                <a href="{{ url('reg') }}">注册</a>
+                <a href="{{ url('login') }}">登录</a>
+
+            </div>
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    欢迎来到 *来一杯* 小组
                 </div>
 
                 <div class="links">
