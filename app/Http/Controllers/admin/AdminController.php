@@ -14,7 +14,7 @@ class AdminController extends Controller
 	{
 		return view('login/reg');
 	}
-	//注册
+	//执行注册
 	public function reg_do()
 	{
 		$post=Request()->all();
