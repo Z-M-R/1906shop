@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
+<<<<<<< HEAD
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="renderer" content="webkit">
     <title>登录</title>  
 
+=======
+    <meta charset="UTF-8">
+    <title>登录</title>
+>>>>>>> 4ad33f435f6ffa84342050b37f355871acc399c2
 </head>
 <body>
 <div class="bg"></div>
 <div class="container">
     <div class="line bouncein">
         <div class="xs6 xm4 xs3-move xm4-move">
-            <div style="height:150px;"></div>
+            <!-- <div style="height:150px;"></div> -->
             <div class="media media-y margin-big-bottom">           
             </div>         
             <form action="/login_do" method="post">
             <div class="panel loginbox">
-                <div class="text-center margin-big padding-big-top"><h1>登录</h1></div>
-                <div class="panel-body" style="padding:30px; padding-bottom:10px; padding-top:10px;">
+                <div class="text-center margin-big padding-big-top"><h1>登录</h1> <a href="{{ url('reg') }}">没有账号？ 去注册</a></div>
+                <div class="panel-body" style="padding:5px; padding-bottom:5px; padding-top:10px;">
                     <div class="form-group">
                         用户名：
                         <div class="field field-icon-right">
@@ -49,7 +54,8 @@
                         </div>
                     </div>
                 </div>
-                <div style="padding:30px;"><input type="submit" class="button button-block bg-main text-big input-big" value="登录"></div>
+                <a href="{{ url('reset') }}">修改密码</a> <a href="{{ url('find') }}">找回密码</a>
+                <div style="padding:20px;"><input type="submit" class="button button-block bg-main text-big input-big" value="登录"></div>
             </div>
             </form>          
         </div>

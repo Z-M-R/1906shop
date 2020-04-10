@@ -22,12 +22,12 @@ class ResetController extends Controller
             $rules = [
                 'user_name'=>'required',
                 'origin_pass'=>'required',
-                'new_pass'=>'required|between:6,20|confirmed',
+                'new_pass'=>'required|between:3,20|confirmed',
             ];
             $msg = [
                 'user_name.required'=>'用户名不能为空！',
                 'origin_pass.required'=>'密码不能为空！',
-                'new_pass.between'=>'密码必须在6~20位之间！',
+                'new_pass.between'=>'密码必须在3~20位之间！',
                 'new_pass.confirmed'=>'新密码与确认密码不一致！',
             ];
             $validator = Validator::make($input,$rules,$msg);

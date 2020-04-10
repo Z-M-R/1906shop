@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>修改密码</title>
 </head>
 <body>
 <div class="card card-small mb-4">
@@ -11,7 +11,7 @@
             @if (count($errors)>0)
                 {{ $errors->first() }}
             @else
-                <strong class="text-muted d-block mb-2">Forms</strong>
+                <strong class="text-muted d-block mb-2">修改密码</strong>
             @endif
             <form  action="/resetdo"  method="post">
                 {{ csrf_field() }}
