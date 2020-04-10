@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\login;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\models\reg;
+use App\Model\reg;
 use Illuminate\Support\Facades\Mail;            //Mail
 use App\Model\UserModel;
 
-class AdminController extends Controller
+class LoginController extends Controller
 {
     //注册
 	public function reg()
