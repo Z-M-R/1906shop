@@ -20,7 +20,7 @@ class UserController extends Controller
     {
         echo '<pre>';print_r($_POST);echo '</pre>';
         $user_name = $request->input('u');
-        $u = UserModel::where(['user_name'=>$user_name])
+        $u = UserModel::where(['username'=>$user_name])
             ->orWhere(['email'=>$user_name])
             ->orWhere(['mobile'=>$user_name])
             ->first();

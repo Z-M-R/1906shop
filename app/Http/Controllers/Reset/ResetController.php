@@ -45,7 +45,7 @@ class ResetController extends Controller
                         ];
                       $res= UserModel::where($where)->update(['password'=>$new_pass]);
                          if($res){
-                             echo"<script>location.href='/reset',alert('修改成功请登录')</script>";
+                             echo"<script>location.href='/login',alert('修改成功请登录')</script>";
                          }
 
                     }else{

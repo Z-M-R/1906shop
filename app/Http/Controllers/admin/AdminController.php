@@ -25,7 +25,7 @@ class AdminController extends Controller
         	$post=request()->except($post['pwd']);
         $res=reg::create($post);
         if($res){
-            return redirect('/login');
+			echo"<script>location.href='/login',alert('注册成功，请登录')</script>";
         }
         }
 	}
