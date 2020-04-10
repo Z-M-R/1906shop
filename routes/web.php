@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/reg','admin\AdminController@reg');
 //执行注册
 Route::post('/reg_do','admin\AdminController@reg_do');
+//登录成功页面
+Route::get('/index','admin\AdminController@index');
+Route::post('/reg_do','admin\AdminController@reg_do');
 //登录
 Route::get('/login','admin\AdminController@login');
 //执行登录

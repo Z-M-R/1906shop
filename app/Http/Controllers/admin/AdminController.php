@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\models\reg;
 use Illuminate\Support\Facades\Mail;            //Mail
+use App\Model\UserModel;
 
 class AdminController extends Controller
 {
@@ -37,20 +38,18 @@ class AdminController extends Controller
 
 	}
 	//执行登录
-	public function login_do()
+	public function login_do(Request $request)
 	{
 		$post=Request()->all();
 		$get=reg::where('mobile',$post['mobile'])->get()->toArray();
 		//dd($get);
-
+		$email=UserModel::where('username',$post['username'])->first()->email;
+//          var_dump($email);exit;die;
 		//登录成功----发送邮件
         $url = [];
-        Mail::send('login.email', $url, function ($message) {
-            $to = [
-                '877673916@qq.com'
-            ];
+        Mail::send('login.email', $url, function ($message) use ($email){
 
-            $message->to($to)->subject("登录成功");
+            $message->to($email)->subject("登录成功");
 
         });
 
@@ -60,6 +59,11 @@ class AdminController extends Controller
 			return redirect('/index');
 		}
 
+	}
+	//注册
+	public function index()
+	{
+		return view('login/index');
 	}
 	
 }
